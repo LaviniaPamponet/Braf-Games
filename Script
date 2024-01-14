@@ -1,5 +1,4 @@
-
-image elevador = "images/elevador.jpg"
+image elevador = "images/elevador.png"
 image hipnose = "images/hipnose.gif"
 image shunormal = "images/shunormal.png"
 image templo = "images/templo.jpg"
@@ -11,15 +10,20 @@ define points = 0
 
 label start:
 
+
     #play music ambiente
-    scene elevador with fade: 
-        zoom 1.5
+    scene elevador at center with fade: 
+        zoom 2
 
     c "Eu estava admirando o Elevador Lacerda, quando senti uma tontura. Ao mesmo tempo que senti algo me tocar."
     #stop music ambiente
+    
 
+    
     show hipnose at center:
-        zoom 2.5
+        zoom 4
+        yalign 0.5
+       
     c "O que está acontecendo?"
     #play music suspense
     
@@ -29,8 +33,11 @@ label start:
     jump fase2
     
 label fase2:
+
     scene templo at center:
-        zoom 1.3
+        zoom 2
+        
+    play music ambiente    
     c "Onde estou? Como vim parar aqui?"
     c "Parece um templo egípcio"
     
@@ -80,19 +87,20 @@ label fase2:
     c "Simplesmente não reagem. Elas estão ocupadas demais em sobreviver."
     s "Você já ouviu alguém comentar sobre o Deus Shu?"
     c "Dificilmente vejo alguém falando de religião e deuses."
-    
+    s "Em que ano você vive? Suas vestes são muito diferentes de qualquer outra que eu já tenha visto."
    
             
     s "Vou lhe propor um teste, caso passe. Terá direito à 4 desejos, além de conhecer outros deuses."
-     
+    #stop music ambiente
+    
     call puzzle1
      
 label puzzle1:
     
     s "Encontre meu amuleto escondido para ir para o próximo templo."
+
     
     return
     
     
-    
-    
+
