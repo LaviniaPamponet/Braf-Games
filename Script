@@ -3,6 +3,7 @@ image hipnose = "images/hipnose.gif"
 image shunormal = "images/shunormal.png"
 image templo = "images/templo.jpg"
 image amuleto = "amuleto.png"
+image logo = "logo.jpeg"
 
 define c = Character ("Camila")
 define s = Character ("Shu")
@@ -35,6 +36,7 @@ label start:
     
 label fase2:
 
+    
     scene templo at center:
         zoom 2
         
@@ -102,7 +104,10 @@ label puzzle1:
     show amuleto at center:
         yalign 0.5
         zoom 0.3
-
+        
+    
+    show logo:
+        zoom 0.2
     
     return
     
